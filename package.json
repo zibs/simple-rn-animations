@@ -1,0 +1,17 @@
+{
+  "name": "tech-talk",
+  "version": "0.0.0",
+  "description": "Hello Exponent!",
+  "author": null,
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "@exponent/ex-navigation": "^1.7.1",
+    "exponent": "^10.0.4",
+    "react": "~15.3.2",
+    "react-native": "github:exponentjs/react-native#sdk-10.1.2",
+    "react-native-animatable": "^0.6.1",
+    "react-native-elements": "../react-native-elements",
+    "react-native-vector-icons": "github:exponentjs/react-native-vector-icons"
+  }
+}
