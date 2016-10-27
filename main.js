@@ -4,6 +4,9 @@ import * as Animatable from 'react-native-animatable';
 import home from './screens/home';
 import second from './screens/second';
 import third from './screens/third';
+import fourth from './screens/fourth';
+import fifth from './screens/fifth';
+import six from './screens/six';
 import {
   StyleSheet,
   Text,
@@ -21,13 +24,9 @@ export const Router = createRouter(() => ({
   home: () => home,
   second: () => second,
   third: () => third,
-  // about: () => AboutScreen,
-  // tabNavigationExample: () => TabNavigationExample,
-  // slidingTabNavigationExample: () => SlidingTabNavigationExample,
-  // alertBarsExample: () => AlertBarsExample,
-  // translucentBarExample: () => TranslucentBarExample,
-  // eventEmitterExample: () => EventEmitterExample,
-  // customNavigationBarExample: () => CustomNavigationBarExample,
+  fourth: () => fourth,
+  fifth: () => fifth,
+  six: () => six,
 }));
 
 class App extends React.Component {

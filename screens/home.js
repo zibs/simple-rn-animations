@@ -12,9 +12,22 @@ import {
 
 
 export default class home extends React.Component {
+
+  constructor (props) {
+    super(props)
+    this.state = ({
+      redoCount: 0
+    })
+  }
+
+  updateState = () => {
+    this.setState({redoCount: this.state.redoCount + 1})
+  }
+
   render() {
     return (
-      <View style={styles.container}>
+      <TouchableOpacity key={this.state.redoCount} onPress={this.updateState} style={styles.container}>
+      <View>
       <Animatable.View style={styles.floralwhite} delay={1300} animation='fadeInDownBig'/>
       <Animatable.View style={styles.honeydew} delay={1200} animation='fadeInDownBig'/>
       <Animatable.View style={styles.indianred} delay={1100} animation='fadeInDownBig'/>
@@ -30,7 +43,7 @@ export default class home extends React.Component {
         <Animatable.View style={styles.red} delay={100} animation='fadeInUpBig'/>
         <Animatable.View style={styles.blue} delay={100} animation='fadeInUpBig'/>
           <TouchableOpacity onPress={() => this.props.navigator.push(Router.getRoute('second'))} >
-            <Animatable.Text animation="pulse" easing="ease-out" iterationCount="infinite" style={{fontSize: 25}}>React Native Animations</Animatable.Text>
+            <Animatable.Text delay={1500} animation="pulse" easing="ease-out" iterationCount="infinite" style={{fontSize: 25, textAlign: 'center'}}>React Native Animations</Animatable.Text>
           </TouchableOpacity>
         <Animatable.View style={styles.blue} delay={100} animation='fadeInDownBig'/>
         <Animatable.View style={styles.red} delay={100} animation='fadeInDownBig'/>
@@ -47,6 +60,7 @@ export default class home extends React.Component {
         <Animatable.View style={styles.honeydew} delay={1200} animation='fadeInDownBig'/>
         <Animatable.View style={styles.floralwhite} delay={1300} animation='fadeInDownBig'/>
       </View>
+      </TouchableOpacity>
     );
   }
 }

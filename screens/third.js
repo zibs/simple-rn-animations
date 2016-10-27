@@ -12,33 +12,67 @@ import {
   Animated,
   TouchableOpacity,
   LayoutAnimation,
-  ScrollView
+  ScrollView,
+  TouchableWithoutFeedback
 } from 'react-native';
 import {
   createRouter,
   NavigationProvider,
 } from '@exponent/ex-navigation';
+import { Router } from '../main';
+
+  const arr = []
+
+  for (var i = 0; i < 500; i++) {
+    arr.push(i)
+  }
 
 export default class home extends React.Component {
 
   constructor (props) {
     super(props)
-    this.state = {
-    }
+    this.animatedValue = []
+     arr.forEach((value) => {
+       this.animatedValue[value] = new Animated.Value(0)
+     })
   }
 
-  render() {
-    return (
-      <ScrollView style={styles.container}>
+  componentDidMount () {
+   this.animate()
+ }
 
-      </ScrollView>
+ animate = () => {
+   const animations = arr.map((item) => {
+     return Animated.timing(
+       this.animatedValue[item],
+       {
+         toValue: 1,
+         duration: 4000
+       }
+     )
+   })
+   Animated.stagger(10, animations).start()
+ }
+
+
+  render() {
+    const animations = arr.map((a, i) => {
+      return <Animated.View key={i} style={{opacity: this.animatedValue[a], height: 20, width: 20, backgroundColor: 'redrgb(45, 154, 244)', marginLeft: 3, marginTop: 3}} />
+    })
+    return (
+      <TouchableWithoutFeedback onPress={() => {this.props.navigator.push(Router.getRoute('fourth'))}}>
+        <View style={styles.container}>
+          {animations}
+        </View>
+      </TouchableWithoutFeedback>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
     flex: 1,
-  },
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  }
 });

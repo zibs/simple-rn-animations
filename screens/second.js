@@ -58,16 +58,17 @@ export default class home extends React.Component {
   }
 
   fourth = () => {
-    console.log('ey')
-  }
-  render() {
-    let left = this.state.firstAni ? {flex: 0.3} : null
-    let mid = this.state.firstAni ? {flex: 0.6} : null
-    let right = this.state.firstAni ? {flex: 0.1} : null
 
-    let leftC = this.state.secondAni ? {marginTop: 200} : null
-    let midC = this.state.secondAni ? {marginTop: 100} : null
-    let rightC = this.state.secondAni ? {marginTop: 50} : null
+  }
+
+  render() {
+    let left = this.state.firstAni ? {flex: (Math.random() * 1)} : null
+    let mid = this.state.firstAni ? {flex: (Math.random() * 1)} : null
+    let right = this.state.firstAni ? {flex: (Math.random() * 1)} : null
+
+    let leftC = this.state.secondAni ? {marginTop: Math.floor((Math.random() * 300) + 1)} : null
+    let midC = this.state.secondAni ? {marginTop: Math.floor((Math.random() * 300) + 1)} : null
+    let rightC = this.state.secondAni ? {marginTop: Math.floor((Math.random() * 300) + 1)} : null
 
     let bigC = this.state.thirdAni ?  {height: 300, width: 300, right: 50} : null
 
@@ -75,10 +76,10 @@ export default class home extends React.Component {
 
     return (
       <ScrollView style={{flex: 1, marginTop: 20}}>
-        <View style={styles.row}>
-          <View style={[styles.square, left]}></View>
-          <View style={[styles.square1, mid]}></View>
-          <View style={[styles.square2, right]}></View>
+        <View style={[styles.row]}>
+          <View style={[styles.square, left, {height: 1300}]}></View>
+          <View style={[styles.square1, mid, {height: 1300}]}></View>
+          <View style={[styles.square2, right, {height: 1300}]}></View>
         </View>
 
         <View style={styles.container}>
@@ -100,18 +101,6 @@ export default class home extends React.Component {
             <View style={[styles.circle3, rightC]}></View>
           </View>
         </View>
-        {/* <View style={{marginTop: 50, flex: 1, borderWidth: 1, marginHorizontal: 10, marginBottom: 25, borderColor: "rgb(124, 160, 193)"}}> */}
-        {/* <PricingCard
-          color='#4f9deb'
-          title='Free'
-          price='$0'
-          info={['1 Animation', 'Basic Support', 'All Core Features']}
-          button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-          containerStyle={{marginTop: 200}, priceA}
-          onButtonPress={this.fourth}
-          onPress={()=> console.log('hey')}
-          /> */}
-        {/* </View> */}
       </ScrollView>
     );
   }
@@ -131,15 +120,18 @@ const styles = StyleSheet.create({
   },
   square: {
     backgroundColor: 'rgb(171, 141, 231)',
-    flex: 1
+    flex: 1,
+    height: 200
   },
   square1: {
     backgroundColor: 'rgb(83, 105, 244)',
-    flex: 1
+    flex: 1,
+    height: 200
   },
   square2: {
     backgroundColor: 'rgb(65, 46, 111)',
-    flex: 1
+    flex: 1,
+    height: 200
   },
   circle: {
     backgroundColor: 'rgb(241, 87, 30)',

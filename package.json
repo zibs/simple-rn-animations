@@ -12,6 +12,7 @@
     "react-native": "github:exponentjs/react-native#sdk-10.1.2",
     "react-native-animatable": "^0.6.1",
     "react-native-elements": "../react-native-elements",
+    "react-native-foldview": "^1.1.0",
     "react-native-vector-icons": "github:exponentjs/react-native-vector-icons"
   }
 }
