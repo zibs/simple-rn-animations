@@ -1,7 +1,6 @@
-import Exponent from 'exponent';
 import React from 'react';
 import * as Animatable from 'react-native-animatable';
-import { Router } from '../main';
+import { Router } from '../App';
 import {
   StyleSheet,
   Text,

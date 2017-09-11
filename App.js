@@ -1,4 +1,4 @@
-import Exponent from 'exponent';
+import Expo from 'expo'
 import React from 'react';
 import * as Animatable from 'react-native-animatable';
 import home from './screens/home';
@@ -18,7 +18,7 @@ import {
   createRouter,
   NavigationProvider,
   StackNavigation,
-} from '@exponent/ex-navigation';
+} from '@expo/ex-navigation';
 
 export const Router = createRouter(() => ({
   home: () => home,
@@ -29,7 +29,7 @@ export const Router = createRouter(() => ({
   six: () => six,
 }));
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
      <NavigationProvider router={Router}>
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-Exponent.registerRootComponent(App);
+// Exponent.registerRootComponent(App);

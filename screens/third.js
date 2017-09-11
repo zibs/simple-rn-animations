@@ -1,4 +1,3 @@
-import Exponent from 'exponent';
 import React from 'react';
 import * as Animatable from 'react-native-animatable';
 import { Button, PricingCard } from 'react-native-elements';
@@ -12,8 +11,8 @@ import {
   ScrollView,
   TouchableWithoutFeedback
 } from 'react-native';
-import { createRouter, NavigationProvider } from '@exponent/ex-navigation';
-import { Router } from '../main';
+import { createRouter, NavigationProvider } from '@expo/ex-navigation';
+import { Router } from '../App';
 
 const arr = [];
 

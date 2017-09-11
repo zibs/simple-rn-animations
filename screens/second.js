@@ -1,4 +1,4 @@
-import Exponent from 'exponent';
+
 import React from 'react';
 import * as Animatable from 'react-native-animatable';
 import { Button, PricingCard } from 'react-native-elements';
@@ -12,7 +12,7 @@ import {
   ScrollView
 } from 'react-native';
 
-import { Router } from '../main';
+import { Router } from '../App';
 
 export default class home extends React.Component {
   constructor(props) {

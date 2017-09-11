@@ -1,4 +1,4 @@
-import Exponent from 'exponent';
+
 import React from 'react';
 import * as Animatable from 'react-native-animatable';
 import { Button, PricingCard } from 'react-native-elements';
@@ -13,11 +13,11 @@ import {
   ListView
 } from 'react-native';
 
-import { Router } from '../main';
+import { Router } from '../App';
 
 const arr = [];
 
-for (var i = 0; i < 500; i++) {
+for (var i = 0; i < 100; i++) {
   arr.push(i);
 }
 
@@ -115,7 +115,7 @@ export default class fifth extends React.Component {
           onPress={() => {
             this.props.navigator.push(Router.getRoute('six'));
           }}>
-          Fifth page
+          Next Page
         </Text>
         <ListView
           dataSource={this.state.dataSource}
