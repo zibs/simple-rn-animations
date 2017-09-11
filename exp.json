@@ -1,9 +1,9 @@
 {
   "name": "tech-talk",
-  "description": "An empty new project",
+  "description": "A tech talk on simple react-native animations",
   "slug": "tech-talk",
-  "sdkVersion": "10.0.0",
-  "version": "1.0.0",
+  "sdkVersion": "20.0.0",
+  "version": "1.0.1",
   "orientation": "portrait",
   "primaryColor": "#cccccc",
   "iconUrl": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png",
