@@ -1,40 +1,36 @@
 import React from 'react';
 
-import {
-  View,
-  StyleSheet,
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import {
   ThinGrayLine,
   ThickGrayLine,
   ThickDarkGrayLine,
-  ThinRedLine,
+  ThinRedLine
 } from './Lines';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   leftPane: {
     flex: 1,
     backgroundColor: '#33373B',
     padding: 16,
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   rightPane: {
     flex: 2,
     padding: 16,
-    backgroundColor: '#fff',
-  },
+    backgroundColor: '#fff'
+  }
 });
 
 export default ({ onPress }) => (
   <View style={styles.container}>
-
     <View style={styles.leftPane}>
       <ThickGrayLine />
 
@@ -62,6 +58,5 @@ export default ({ onPress }) => (
         </View>
       </View>
     </View>
-
   </View>
 );

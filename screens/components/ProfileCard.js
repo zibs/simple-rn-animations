@@ -1,26 +1,15 @@
-import React, {
-  Component,
-} from 'react';
+import React, { Component } from 'react';
 
-import {
-  View,
-  Text,
-  TouchableHighlight,
-  StyleSheet,
-} from 'react-native';
+import { View, Text, TouchableHighlight, StyleSheet } from 'react-native';
 
 import FoldView from 'react-native-foldview';
 
 import ProfileDetailCard from './ProfileDetailCard';
 import AdditionalInfoCard from './AdditionalInfoCard';
 
-import {
-  ThinGrayLine,
-  ThickDarkGrayLine,
-} from './Lines';
+import { ThinGrayLine, ThickDarkGrayLine } from './Lines';
 
 export default class Row extends Component {
-
   componentWillMount() {
     this.renderBackface = this.renderBackface.bind(this);
     this.renderInnerBackFace = this.renderInnerBackFace.bind(this);
@@ -31,7 +20,7 @@ export default class Row extends Component {
       <View
         style={{
           backgroundColor: '#D6EFFF',
-          flex: 1,
+          flex: 1
         }}
       />
     );
@@ -41,14 +30,11 @@ export default class Row extends Component {
     const onPress = this.props.onPress;
     return (
       <View style={{ flex: 1 }}>
-
         <FoldView
           renderFrontface={this.renderBlankFace}
-          renderBackface={this.renderInnerBackFace}
-        >
+          renderBackface={this.renderInnerBackFace}>
           <AdditionalInfoCard onPress={onPress} />
         </FoldView>
-
       </View>
     );
   }
@@ -63,30 +49,24 @@ export default class Row extends Component {
           borderTopWidth: StyleSheet.hairlineWidth,
           borderTopColor: '#BDC2C9',
           borderBottomLeftRadius: 2,
-          borderBottomRightRadius: 2,
-        }}
-      >
+          borderBottomRightRadius: 2
+        }}>
         <View
           style={{
             backgroundColor: '#FFBD18',
             flex: 1,
             margin: 14,
-            borderRadius: 2,
-          }}
-        >
+            borderRadius: 2
+          }}>
           <TouchableHighlight
             style={{
               flex: 1,
               justifyContent: 'center',
-              alignItems: 'center',
+              alignItems: 'center'
             }}
-            onPress={onPress}
-          >
-            <Text>
-              thanks :) 
-            </Text>
+            onPress={onPress}>
+            <Text>thanks :)</Text>
           </TouchableHighlight>
-
         </View>
       </View>
     );
@@ -100,38 +80,29 @@ export default class Row extends Component {
         style={{
           flex: 1,
           backgroundColor: '#fff',
-          flexDirection: 'column',
-        }}
-      >
-
-        <View style={{ flex: 1 }} >
-
+          flexDirection: 'column'
+        }}>
+        <View style={{ flex: 1 }}>
           <View
             style={{
               flex: 1,
               paddingBottom: 10,
-              padding: 16,
-            }}
-          >
-
+              padding: 16
+            }}>
             <ThinGrayLine width={120} />
 
             <View
               style={{
                 marginTop: 10,
-                flexDirection: 'row',
-              }}
-            >
-
-              <TouchableHighlight
-                onPress={onPress}
-              >
+                flexDirection: 'row'
+              }}>
+              <TouchableHighlight onPress={onPress}>
                 <View
                   style={{
                     width: 40,
                     height: 40,
                     marginRight: 10,
-                    backgroundColor: '#BDC2C9',
+                    backgroundColor: '#BDC2C9'
                   }}
                 />
               </TouchableHighlight>
@@ -139,30 +110,22 @@ export default class Row extends Component {
               <View
                 style={{
                   flex: 1,
-                  flexDirection: 'column',
-                }}
-              >
+                  flexDirection: 'column'
+                }}>
                 <ThickDarkGrayLine width={200} />
                 <ThinGrayLine width={120} />
               </View>
-
             </View>
-
           </View>
 
           <View style={{ flex: 1 }}>
-
             <FoldView
               renderFrontface={this.renderBlankFace}
-              renderBackface={this.renderBackface}
-            >
+              renderBackface={this.renderBackface}>
               <ProfileDetailCard onPress={onPress} />
             </FoldView>
-
           </View>
-
         </View>
-
       </View>
     );
   }

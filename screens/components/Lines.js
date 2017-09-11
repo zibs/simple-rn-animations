@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  View,
-  TouchableHighlight,
-} from 'react-native';
+import { View, TouchableHighlight } from 'react-native';
 
 const Line = ({ style, onPress }) => {
   if (onPress) {
@@ -12,12 +9,11 @@ const Line = ({ style, onPress }) => {
         style={[
           {
             marginBottom: 10,
-            borderRadius: 2,
+            borderRadius: 2
           },
-          style,
+          style
         ]}
-        onPress={onPress}
-      >
+        onPress={onPress}>
         <View />
       </TouchableHighlight>
     );
@@ -27,9 +23,9 @@ const Line = ({ style, onPress }) => {
     <View
       style={[
         {
-          marginBottom: 10,
+          marginBottom: 10
         },
-        style,
+        style
       ]}
     />
   );
@@ -40,7 +36,7 @@ const ThinLine = ({ color, width = 60, ...props }) => (
     style={{
       width,
       backgroundColor: color,
-      height: 10,
+      height: 10
     }}
     {...props}
   />
@@ -51,28 +47,24 @@ const ThickLine = ({ color, width = 70, ...props }) => (
     style={{
       width,
       backgroundColor: color,
-      height: 20,
+      height: 20
     }}
     {...props}
   />
 );
 
-export const ThinGrayLine = (props) => (
-  <ThinLine color={'#BDC2C9'} {...props} />
-);
+export const ThinGrayLine = props => <ThinLine color={'#BDC2C9'} {...props} />;
 
-export const ThickGrayLine = (props) => (
+export const ThickGrayLine = props => (
   <ThickLine color={'#BDC2C9'} {...props} />
 );
 
-export const ThickWhiteLine = (props) => (
+export const ThickWhiteLine = props => (
   <ThickLine color={'#FFFFFF'} {...props} />
 );
 
-export const ThickDarkGrayLine = (props) => (
+export const ThickDarkGrayLine = props => (
   <ThickLine color={'#33373B'} {...props} />
 );
 
-export const ThinRedLine = (props) => (
-  <ThinLine color={'#DB0000'} {...props} />
-);
+export const ThinRedLine = props => <ThinLine color={'#DB0000'} {...props} />;

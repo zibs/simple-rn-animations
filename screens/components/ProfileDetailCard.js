@@ -1,14 +1,8 @@
 import React from 'react';
 
-import {
-  View,
-  StyleSheet,
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import {
-  ThinGrayLine,
-  ThickGrayLine,
-} from './Lines';
+import { ThinGrayLine, ThickGrayLine } from './Lines';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,8 +11,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     flexDirection: 'row',
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: '#BDC2C9',
-  },
+    borderTopColor: '#BDC2C9'
+  }
 });
 
 export default ({ onPress }) => (

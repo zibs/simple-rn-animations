@@ -6,13 +6,13 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "@exponent/ex-navigation": "^1.7.1",
-    "exponent": "^10.0.4",
-    "react": "~15.3.2",
-    "react-native": "github:exponentjs/react-native#sdk-10.1.2",
-    "react-native-animatable": "^0.6.1",
+    "@expo/ex-navigation": "^1.7.1",
+    "expo": "^20.0.0",
+    "react": "16.0.0-alpha.12",
+    "react-native":
+      "https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz",
+    "react-native-animatable": "^1.2.3",
     "react-native-elements": "../react-native-elements",
-    "react-native-foldview": "^1.1.0",
-    "react-native-vector-icons": "github:exponentjs/react-native-vector-icons"
+    "react-native-foldview": "^1.1.0"
   }
 }

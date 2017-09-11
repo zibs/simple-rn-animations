@@ -1,14 +1,8 @@
 import React from 'react';
 
-import {
-  View,
-  StyleSheet,
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import {
-  ThinGrayLine,
-  ThickDarkGrayLine,
-} from './Lines';
+import { ThinGrayLine, ThickDarkGrayLine } from './Lines';
 
 export default ({ onPress }) => (
   <View
@@ -20,9 +14,8 @@ export default ({ onPress }) => (
 
       backgroundColor: '#FFFFFF',
       borderTopWidth: StyleSheet.hairlineWidth,
-      borderTopColor: '#BDC2C9',
-    }}
-  >
+      borderTopColor: '#BDC2C9'
+    }}>
     <View style={{ flex: 1 }}>
       <ThickDarkGrayLine width={100} />
       <ThinGrayLine width={80} onPress={onPress} />
@@ -32,6 +25,5 @@ export default ({ onPress }) => (
       <ThickDarkGrayLine width={60} />
       <ThinGrayLine width={120} />
     </View>
-
   </View>
 );

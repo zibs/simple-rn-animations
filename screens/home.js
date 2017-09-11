@@ -10,56 +10,178 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-
 export default class home extends React.Component {
-
-  constructor (props) {
-    super(props)
-    this.state = ({
+  constructor(props) {
+    super(props);
+    this.state = {
       redoCount: 0
-    })
+    };
   }
 
   updateState = () => {
-    this.setState({redoCount: this.state.redoCount + 1})
-  }
+    this.setState({ redoCount: this.state.redoCount + 1 });
+  };
 
   render() {
     return (
-      <TouchableOpacity key={this.state.redoCount} onPress={this.updateState} style={styles.container}>
-      <View>
-      <Animatable.View style={styles.floralwhite} delay={1300} animation='fadeInDownBig'/>
-      <Animatable.View style={styles.honeydew} delay={1200} animation='fadeInDownBig'/>
-      <Animatable.View style={styles.indianred} delay={1100} animation='fadeInDownBig'/>
-      <Animatable.View style={styles.aqua} delay={1000} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.lavenderblush} delay={900} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.aquamarine} delay={800} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.darkgreen} delay={700} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.crimson} delay={600} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.darkgoldenrod} delay={500} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.blueviolet} delay={400} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.deeppink} delay={300} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.darkorange} delay={200} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.red} delay={100} animation='fadeInUpBig'/>
-        <Animatable.View style={styles.blue} delay={100} animation='fadeInUpBig'/>
-          <TouchableOpacity onPress={() => this.props.navigator.push(Router.getRoute('second'))} >
-            <Animatable.Text delay={1500} animation="pulse" easing="ease-out" iterationCount="infinite" style={{fontSize: 25, textAlign: 'center'}}>React Native Animations</Animatable.Text>
+      <TouchableOpacity
+        key={this.state.redoCount}
+        onPress={this.updateState}
+        style={styles.container}>
+        <View>
+          <Animatable.View
+            style={styles.floralwhite}
+            delay={1300}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.honeydew}
+            delay={1200}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.indianred}
+            delay={1100}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.aqua}
+            delay={1000}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.lavenderblush}
+            delay={900}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.aquamarine}
+            delay={800}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.darkgreen}
+            delay={700}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.crimson}
+            delay={600}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.darkgoldenrod}
+            delay={500}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.blueviolet}
+            delay={400}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.deeppink}
+            delay={300}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.darkorange}
+            delay={200}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.red}
+            delay={100}
+            animation="fadeInUpBig"
+          />
+          <Animatable.View
+            style={styles.blue}
+            delay={100}
+            animation="fadeInUpBig"
+          />
+          <TouchableOpacity
+            onPress={() =>
+              this.props.navigator.push(Router.getRoute('second'))}>
+            <Animatable.Text
+              delay={1500}
+              animation="pulse"
+              easing="ease-out"
+              iterationCount="infinite"
+              style={{ fontSize: 25, textAlign: 'center' }}>
+              React Native Animations
+            </Animatable.Text>
           </TouchableOpacity>
-        <Animatable.View style={styles.blue} delay={100} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.red} delay={100} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.darkorange} delay={200} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.deeppink} delay={300} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.blueviolet} delay={400} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.darkgoldenrod} delay={500} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.crimson} delay={600} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.darkgreen} delay={700} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.aquamarine} delay={800} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.lavenderblush} delay={900} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.aqua} delay={1000} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.indianred} delay={1100} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.honeydew} delay={1200} animation='fadeInDownBig'/>
-        <Animatable.View style={styles.floralwhite} delay={1300} animation='fadeInDownBig'/>
-      </View>
+          <Animatable.View
+            style={styles.blue}
+            delay={100}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.red}
+            delay={100}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.darkorange}
+            delay={200}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.deeppink}
+            delay={300}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.blueviolet}
+            delay={400}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.darkgoldenrod}
+            delay={500}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.crimson}
+            delay={600}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.darkgreen}
+            delay={700}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.aquamarine}
+            delay={800}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.lavenderblush}
+            delay={900}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.aqua}
+            delay={1000}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.indianred}
+            delay={1100}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.honeydew}
+            delay={1200}
+            animation="fadeInDownBig"
+          />
+          <Animatable.View
+            style={styles.floralwhite}
+            delay={1300}
+            animation="fadeInDownBig"
+          />
+        </View>
       </TouchableOpacity>
     );
   }
@@ -70,7 +192,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   red: {
     height: 20,
